@@ -26,14 +26,7 @@ raw_requirement = "The system MUST allow users to login securely, and it should 
 # ------------------------
 # 3. Cleaning Function
 # ------------------------
-def clean_requirement(text):
-    text = text.lower()  # lowercase
-    text = text.strip('“"').rstrip('!').strip()  # remove quotes/exclamations
-    text = text.replace(", and it should", " and")  # custom fix
-    text = re.sub(r'\s+', ' ', text).strip()  # remove extra spaces
-    return text
 
-clean_output = clean_requirement(raw_requirement)
 
 # ------------------------
 # 4. Segmentation Function
